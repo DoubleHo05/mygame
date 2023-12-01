@@ -85,9 +85,7 @@ class Main:
                         if self.game.enter:
                             self.game.changed_name = True
 
-                    
-
-                    
+                                      
             self.game.run()
 
             # draw game cursor
