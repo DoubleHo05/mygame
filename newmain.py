@@ -49,7 +49,6 @@ class Main:
                             if self.game.coins_rect_list[k].collidepoint(event.pos):
                                 self.game.coin = (k + 1) * 1000
 
-
                 if event.type == pygame.KEYDOWN:
 
                     self.game.enter = True
