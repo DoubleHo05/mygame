@@ -21,6 +21,7 @@ class runGame():
 
         # Data for next feature
         self.cars_name = []
+        self.map_number = 0
         
       
 
@@ -91,10 +92,8 @@ class runGame():
             else:
                 self.state = True
                 self.cars_name = self.game.cars_name_list
-                
+                self.map_number = self.game.map
                 break
-
-            
 
             # draw game cursor
             self.game.cursor_img_rect = pygame.mouse.get_pos()

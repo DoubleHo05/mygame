@@ -4,6 +4,7 @@ from operator import attrgetter
 
 pygame.init()
 screen  = pygame.display.set_mode((1280, 720),pygame.RESIZABLE)
+pygame.display.set_caption('US88')
 font = pygame.font.SysFont('Consolas',30)
 
 normal1_1 = ['cars/AS87/AS87_1.png', 'cars/NA4/NA4_1.png', 'cars/NA5/NA5_1.png', 'cars/NA6/NA6_1.png', 'cars/NA2/NA2_1.png']
@@ -170,7 +171,7 @@ class Leaderboard():
                 
 
 class Racing():
-    def __init__(self, cars_name):
+    def __init__(self, cars_name, map_number):
 
         self.final_rank = 5 
         self.screen_speed = 5
@@ -179,6 +180,7 @@ class Racing():
 
         
         self.cars_name = cars_name
+        self.map = pygame.transform.scale(pygame.image.load(f'maps/map{map_number}.jpg'), (1280, 720)).convert_alpha()
         
 
         self.leaderboard = Leaderboard(self.cars_name)
@@ -207,8 +209,12 @@ class Racing():
         time_rect = time_surf.get_rect(topleft = (0,0))
         screen.blit(time_surf, time_rect)
 
+    def display_map(self):
+        screen.blit(self.map, (0, 0))
+
     def run(self):           
         self.display_time()
+        self.display_map()
         self.mystery_list.draw(screen)
         self.mystery_list.update(self.car1,self.screen_speed)
         self.mystery_list.update(self.car2,self.screen_speed)

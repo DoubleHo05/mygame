@@ -7,11 +7,6 @@ class Main():
     def __init__(self):
 
         # general
-        pygame.init()
-        pygame.display.set_caption('US88')
-        self.display_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), pygame.RESIZABLE)
-        self.clock = pygame.time.Clock()
-
         self.game = runGame()
         
 
@@ -21,9 +16,7 @@ class Main():
             self.game.run()
         
         if self.game.state:
-            self.racing = runRacing(self.game.cars_name)
+            self.racing = runRacing(self.game.cars_name, self.game.map_number)
             self.racing.run()
         
-        
-
 Main().run()

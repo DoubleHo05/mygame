@@ -176,8 +176,7 @@ class Game:
             self.chose_coin = True
             
 
-    # def display_map(self):
-    #     self.display_surface.blit(pygame.transform.scale(pygame.image.load(f'maps/map{self.map}.jpg'), (1280, 720)), (0, 0))
+    
 
 
 
