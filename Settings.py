@@ -1,5 +1,6 @@
 import pygame
-import random
+from random import *
+from operator import attrgetter
 # Game size
 GAME_WIDTH, GAME_HEIGHT = 1280, 550
 GAME_X, GAME_Y = 0, 170
