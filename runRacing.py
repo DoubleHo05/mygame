@@ -6,7 +6,7 @@ class runRacing():
 
         # general
         pygame.init()
-        
+
         self.clock = pygame.time.Clock()
         self.racing = Racing(cars_name, map_number)
 
@@ -17,7 +17,6 @@ class runRacing():
                     pygame.quit()
                     exit()
 
-            
             self.racing.run()
         
             pygame.display.update()
